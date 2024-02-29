@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   overflow-x: hidden;
+}
+
+header.header-content {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+
+img.jc-logo--layout {
+   width: 70px;
+   height: 70px;
+}
+
+section.header-content__login-buttons {
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
+}
+
+section.main-content__landing-content {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+}
+
+section.main-content__login-content {
+   display: none;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+}
+
+section.main-content__register-content {
+   display: none;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+}
+
+img.main-content__login-image--layout {
+   width: 500px;
+   height: 500px;
+}
