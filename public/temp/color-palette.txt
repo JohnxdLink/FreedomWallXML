@@ -1,0 +1,6 @@
+Black Bean        : #460000
+Black             : #060000
+Cinnabar          : #FC3E2C
+Turkey Red        : #B00606
+Chocolate Cosmos  : #5F1D1D
+White             : #FBFBFB

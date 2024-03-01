@@ -7,11 +7,16 @@
 * {
    margin: 0;
    padding: 0;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
    overflow-x: hidden;
 }
 
+html {
+   width: 100vw;
+}
+
 header.header-content {
+   padding: 0px 20px 0px 20px;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
@@ -29,25 +34,193 @@ section.header-content__login-buttons {
    gap: 10px;
 }
 
+/*  ! Define button styles */
+button.login-btn--layout {
+   background-color: #5f1d1d;
+   color: #fbfbfb;
+   border: 2px solid #460000;
+   padding: 10px 20px;
+   font-size: 16px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button.register-btn--layout {
+   background-color: #fc3e2c;
+   color: #060000;
+   border: 2px solid #b00606;
+   padding: 10px 20px;
+   font-size: 16px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ! Hover effect */
+button.login-btn--layout:hover,
+button.register-btn--layout:hover {
+   background-color: #460000;
+   color: #fc3e2c;
+}
+
+/* ! Main Content - Landing */
 section.main-content__landing-content {
+   padding: 0px 30px 0px 30px;
+   width: 100vw;
    display: flex;
    flex-direction: row;
-   justify-content: space-around;
    align-items: center;
+   gap: 20px;
 }
 
+section.main-content__login-image-content {
+   width: 50vw;
+}
+
+section.main-content__landing-content-text {
+   width: 50vw;
+   display: flex;
+   flex-direction: column;
+}
+
+h1.main-content__landing-content-header {
+   color: #5F1D1D;
+   font-size: 2rem;
+}
+
+p.main-content__landing-content-body {
+   color: #060000;
+   font-size: 1.2rem;
+   line-height: 1.6;
+   text-align: justify;
+}
+
+/* ! Main Content - Login */
 section.main-content__login-content {
+   width: 100vw;
    display: none;
    flex-direction: row;
-   justify-content: space-around;
    align-items: center;
 }
 
+section.main-content__login-image {
+   width: 50vw;
+}
+
+section.main-content__login-form {
+   width: 50vw;
+}
+
+div.login-form-content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+form.sub-form-content {
+   padding: 10px;
+   width: 70%;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+h1.form__header {
+   text-align: center;
+   color: #5F1D1D;
+   font-size: 2rem;
+}
+
+h1.form__sub-header {
+   text-align: center;
+   color: #808080;
+   font-weight: lighter;
+   font-size: 1rem;
+}
+
+div.form__content {
+   display: flex;
+   flex-direction: column;
+}
+
+label.form-lbl-header {
+   color: #5F1D1D;
+   font-size: 1.2rem;
+}
+
+input.form-input-body {
+   padding: 10px;
+   width: 100%;
+   font-size: 1rem;
+   border: 1px solid #5F1D1D;
+   border-radius: 5px;
+   outline: none;
+}
+
+button.form-btn-submit {
+   width: 100%;
+   padding: 10px 0px 10px 0px;
+   background-color: #5F1D1D;
+   color: #FBFBFB;
+   font-size: 1.2rem;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button.form-btn-submit:hover {
+   background-color: #460000;
+   color: #FC3E2C;
+}
+
+div.other-form-login {
+   margin: 10px 0px 0px 0px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+p.other-form__or-text {
+   font-size: 1rem;
+   color: #5F1D1D;
+}
+
+div.other-form__btn-content {
+   margin: 10px 0px 0px 0px;
+   width: 100%;
+}
+
+button.other-form__login-btn {
+   padding: 10px 0px 10px 0px;
+   width: 100%;
+   background-color: #460000;
+   color: #FBFBFB;
+   font-size: 1em;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button.other-form__login-btn:hover {
+   background-color: #5F1D1D;
+   color: #FBFBFB;
+}
+
+/* ! Main Content - Register */
 section.main-content__register-content {
+   width: 100vw;
    display: none;
    flex-direction: row;
-   justify-content: space-around;
    align-items: center;
+}
+
+section.main-content__register-form {
+   width: 50vw;
+   height: 85vh;
 }
 
 img.main-content__login-image--layout {

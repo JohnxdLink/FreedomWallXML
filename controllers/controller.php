@@ -21,7 +21,14 @@ function handleLogin()
    // Validate login (you may want to check against the XML file)
    $users = loadUsers();
 
-   if (isset($users[$username]) && $users[$username]['password'] === $password) {
+   if ($username === 'admin' && $password === 'admin') {
+      // Redirect to admin page
+      echo '<script>';
+      echo 'alert("You are redirecting to admin page");';
+      echo 'window.location.href = "../views/admin/index.php";';
+      echo '</script>';
+      exit();
+   } elseif (isset($users[$username]) && $users[$username]['password'] === $password) {
       // Set user session and redirect to home
       $_SESSION['username'] = $username;
       header('Location: ../views/home/index.php');
