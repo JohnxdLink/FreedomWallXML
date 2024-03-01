@@ -8,71 +8,113 @@
    <title>Home Page</title>
 </head>
 
-<body>
-   <header>
-      <section>
-         <h1>Freedom-Wall</h1>
+<body class="whole-content">
+
+   <header class="header-content">
+
+      <section class="header-content__logo">
+         <img class="jc-logo--layout" src="../../public/images/JC Logo.png" alt="">
       </section>
-      <section>
+
+      <section class="header-content_panes">
          <div>
+            <button>left-pane</button>
+         </div>
+         <div>
+            <button onclick="hide_left_right_pane()">middle-pane</button>
+         </div>
+         <div>
+            <button>right-pane</button>
+         </div>
+         <div>
+            <button>reset-pane</button>
+         </div>
+      </section>
+
+      <section class="header-content__login-acccount">
+         <div class="user-greeting">
             <?php
             session_start();
             // Check if the user is logged in
             if (isset($_SESSION['username'])) {
-               echo 'Hello, ' . $_SESSION['username'] . '!<br>';
+               echo '<p class="user-greeting--layout">Hello, <span class="username">' . $_SESSION['username'] . '</span>!</p>';
             } else {
                header('Location: ../index.php');
                exit();
             }
             ?>
          </div>
-         <div>
-            <a href="../../index.php">Logout</a>
+         <div class="logout-link">
+            <a class="logout-anchor" href="../../index.php">Logout</a>
          </div>
       </section>
    </header>
-   <main>
-      <section>
-         <h2>Create Freedom Wall Entry</h2>
-         <form action="../../controllers/freedom-create.php" method="post">
-            <input type="hidden" name="action" value="create">
-            <textarea name="create_content" rows="4" cols="50" required></textarea><br>
-            <button type="submit">Create Entry</button>
-         </form>
+
+   <!-- Main Content -->
+   <main class="main-content">
+      <!-- Create freedomwall.xml -->
+      <section id="create-entry-id" class="main-content__create-entry">
+
+         <div class="main-content__header-content">
+            <div class="header-ask-image">
+               <img class="header-ask-image--layout" src="" alt="">
+            </div>
+            <div>
+               <p>What's in your mind?</p>
+            </div>
+         </div>
+
+         <div class="main-content__form">
+            <form class="main-content__sub-form" action="../../controllers/freedom-create.php" method="post">
+               <div>
+                  <input type="hidden" name="action" value="create">
+               </div>
+               <div>
+                  <textarea class="main-content__txt-area" name="create_content" class="entry-content" required></textarea><br>
+               </div>
+               <div>
+                  <button class="main-content__btn-submit" type="submit" class="entry-button">Create Entry</button>
+               </div>
+            </form>
+         </div>
       </section>
 
       <!-- Read freedomwall.xml -->
-      <section>
+      <section id="read-entry-id" class="main-content__read-entry">
          <?php include_once '../../controllers/freedom-read.php'; ?>
       </section>
 
       <!-- Update freedomwall.xml -->
-      <section>
-         <h2>Update Freedom Wall Entry</h2>
-         <form action="../../controllers/freedom-update.php" method="post">
-            <input type="hidden" name="action" value="update">
-            <label for="update_id">Entry ID:</label>
-            <input type="text" id="update_id" name="update_id" required>
-            <br>
-            <label for="update_content">New Content:</label>
-            <textarea name="update_content" rows="4" cols="50" required></textarea>
-            <br>
-            <button type="submit">Update Entry</button>
-         </form>
-      </section>
+      <section id="update-delete-entry" class="update-delete-entry">
+         <!-- Update freedomwall.xml -->
+         <section class="update-entry">
+            <h2>Update Freedom Wall Entry</h2>
+            <form action="../../controllers/freedom-update.php" method="post">
+               <input type="hidden" name="action" value="update">
+               <label for="update_id">Entry ID:</label>
+               <input type="text" id="update_id" name="update_id" class="entry-id" required>
+               <br>
+               <label for="update_content">New Content:</label>
+               <textarea name="update_content" class="entry-content" required></textarea>
+               <br>
+               <button type="submit" class="entry-button">Update Entry</button>
+            </form>
+         </section>
 
-      <!-- Delete freedomwall.xml -->
-      <section>
-         <h2>Delete Freedom Wall Entry</h2>
-         <form action="../../controllers/freedom-delete.php" method="post">
-            <input type="hidden" name="action" value="delete">
-            <label for="delete_id">Entry ID:</label>
-            <input type="text" id="delete_id" name="delete_id" required>
-            <br>
-            <button type="submit">Delete Entry</button>
-         </form>
+         <!-- Delete freedomwall.xml -->
+         <section class="delete-entry">
+            <h2>Delete Freedom Wall Entry</h2>
+            <form action="../../controllers/freedom-delete.php" method="post">
+               <input type="hidden" name="action" value="delete">
+               <label for="delete_id">Entry ID:</label>
+               <input type="text" id="delete_id" name="delete_id" class="entry-id" required>
+               <br>
+               <button type="submit" class="entry-button">Delete Entry</button>
+            </form>
+         </section>
       </section>
    </main>
+
    <script src="../js/script.js"></script>
 </body>
 

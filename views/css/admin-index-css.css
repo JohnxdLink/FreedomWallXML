@@ -1,0 +1,130 @@
+/* Admin Page Styles */
+
+body {
+   font-family: 'Arial', sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #FBFBFB;
+   /* White */
+}
+
+h2 {
+   color: #5F1D1D;
+   /* Chocolate Cosmos */
+   text-align: center;
+   margin-top: 20px;
+}
+
+section {
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+}
+
+form {
+   background-color: #FBFBFB;
+   /* White */
+   padding: 20px;
+   border: 1px solid #5F1D1D;
+   /* Chocolate Cosmos */
+   border-radius: 10px;
+   width: 50%;
+}
+
+form div {
+   display: flex;
+   margin-bottom: 15px;
+}
+
+form div div {
+   flex: 1;
+   padding: 0 10px;
+}
+
+form label {
+   font-weight: bold;
+   margin-bottom: 5px;
+   color: #5F1D1D;
+   /* Chocolate Cosmos */
+}
+
+form input,
+form textarea {
+   width: 100%;
+   padding: 10px;
+   font-size: 1em;
+   border: 1px solid #5F1D1D;
+   /* Chocolate Cosmos */
+   border-radius: 5px;
+   outline: none;
+}
+
+form button {
+   background-color: #460000;
+   /* Black Bean */
+   color: #FBFBFB;
+   /* White */
+   padding: 10px 20px;
+   font-size: 1em;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease, color 0.3s ease;
+   margin-top: 10px;
+}
+
+form button:hover {
+   background-color: #5F1D1D;
+   /* Chocolate Cosmos */
+   color: #FBFBFB;
+   /* White */
+}
+
+/* Table Styles */
+
+table {
+   width: 80%;
+   margin: 20px auto;
+   border-collapse: collapse;
+   background-color: #FBFBFB;
+   /* White */
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+   /* Add a subtle box shadow */
+}
+
+table th,
+table td {
+   padding: 12px;
+   border: 1px solid #5F1D1D;
+   /* Chocolate Cosmos */
+   text-align: left;
+}
+
+table th {
+   background-color: #460000;
+   /* Black Bean */
+   color: #FBFBFB;
+   /* White */
+}
+
+table tr:nth-child(even) {
+   background-color: #FBFBFB;
+   /* White */
+}
+
+table tr:nth-child(odd) {
+   background-color: #F2F2F2;
+   /* Light Gray */
+}
+
+table a {
+   text-decoration: none;
+   color: #460000;
+   /* Black Bean */
+   transition: color 0.3s ease;
+}
+
+table a:hover {
+   color: #5F1D1D;
+   /* Chocolate Cosmos */
+}

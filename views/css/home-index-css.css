@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   overflow-x: hidden;
+}
+
+html {
+   width: 100vw;
+   overflow: hidden;
+}
+
+header.header-content {
+   padding: 0px 10px 0px 0px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+
+img.jc-logo--layout {
+   width: 70px;
+   height: 70px;
+}
+
+section.header-content__login-acccount {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 10px;
+}
+
+section.header-content_panes {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 10px;
+}
+
+p.user-greeting--layout {
+   font-size: 1.2rem;
+   color: #460000;
+   font-weight: bold;
+}
+
+div.logout-link {
+   padding: 10px 20px;
+   font-size: 1rem;
+   background-color: #fc3e2c;
+   border: 2px solid #b00606;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+div.logout-link:hover {
+   background-color: #460000;
+}
+
+a.logout-anchor {
+   text-decoration: none;
+   color: #ffffff;
+}
+
+/* ! Main Content */
+main.main-content {
+   padding: 0px 10px 0px 10px;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+/* ! Main Content Header */
+div.main-content__header-content {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+section.main-content__create-entry {
+   width: 20vw;
+   background-color: #460000;
+}
+
+/* ! Main Content Read */
+section.main-content__read-entry {
+   overflow-x: hidden;
+   overflow-y: auto;
+   width: 60vw;
+}
+
+div.freedom-wall-content {
+   margin: 20px;
+   display: flex;
+   flex-direction: column;
+   border: 1px solid #fc3e2c;
+   border-radius: 7px;
+}
+
+div.freedom-wall-id-content {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+section.update-delete-entry {
+   width: 20vw;
+   display: flex;
+   flex-direction: column;
+
+}

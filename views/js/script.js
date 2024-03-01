@@ -12,6 +12,12 @@ function open_register_content() {
     "none";
 }
 
+function hide_left_right_pane() {
+  document.getElementById("create-entry-id").style.display = "none";
+  document.getElementById("update-delete-entry").style.display = "none";
+  document.getElementById("read-entry-id").style.width = "100vw";
+}
+
 function confirmDelete(userId) {
   var confirmation = confirm("Are you sure to delete?");
   if (confirmation) {

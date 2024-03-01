@@ -16,11 +16,16 @@ if (file_exists($xmlFile)) {
 
       // Display the entries in the specified format
 ?>
-      <div class="freedom-wall-container">
+      <div class="freedom-wall-content">
          <div class="freedom-wall-id-content">
-            <p><?= $id ?></p>
+            <div>
+               <label for="">Freedom Wall ID No.</label>
+            </div>
+            <div>
+               <p><?= $id ?></p>
+            </div>
          </div>
-         <div class="freedom-wall-content">
+         <div class="freedom-wall-content-text">
             <p><?= $content ?></p>
          </div>
       </div>
