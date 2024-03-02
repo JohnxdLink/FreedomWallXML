@@ -9,7 +9,6 @@
 </head>
 
 <body class="whole-content">
-
    <header class="header-content">
 
       <section class="header-content__logo">
@@ -54,14 +53,8 @@
    <main class="main-content">
       <!-- Create freedomwall.xml -->
       <section id="create-entry-id" class="main-content__create-entry">
-
          <div class="main-content__header-content">
-            <div class="header-ask-image">
-               <img class="header-ask-image--layout" src="" alt="">
-            </div>
-            <div>
-               <p>What's in your mind?</p>
-            </div>
+            <p class="main-content__haeder-text">What's in your mind?</p>
          </div>
 
          <div class="main-content__form">
@@ -69,36 +62,60 @@
                <div>
                   <input type="hidden" name="action" value="create">
                </div>
-               <div>
-                  <textarea class="main-content__txt-area" name="create_content" class="entry-content" required></textarea><br>
+               <div class="main-content__txt-content">
+                  <textarea class="main-content__txt-area" name="create_content" rows="17"></textarea><br>
                </div>
                <div>
-                  <button class="main-content__btn-submit" type="submit" class="entry-button">Create Entry</button>
+                  <button class="main-content__btn-submit" type="submit">POST</button>
                </div>
             </form>
          </div>
       </section>
 
       <!-- Read freedomwall.xml -->
-      <section id="read-entry-id" class="main-content__read-entry">
-         <?php include_once '../../controllers/freedom-read.php'; ?>
+      <section class="main-cotent__scroll">
+         <section id="read-entry-id" class="main-content__read-entry">
+            <?php include_once '../../controllers/freedom-read.php'; ?>
+         </section>
       </section>
+
 
       <!-- Update freedomwall.xml -->
       <section id="update-delete-entry" class="update-delete-entry">
          <!-- Update freedomwall.xml -->
          <section class="update-entry">
-            <h2>Update Freedom Wall Entry</h2>
-            <form action="../../controllers/freedom-update.php" method="post">
-               <input type="hidden" name="action" value="update">
-               <label for="update_id">Entry ID:</label>
-               <input type="text" id="update_id" name="update_id" class="entry-id" required>
-               <br>
-               <label for="update_content">New Content:</label>
-               <textarea name="update_content" class="entry-content" required></textarea>
-               <br>
-               <button type="submit" class="entry-button">Update Entry</button>
-            </form>
+            <div>
+               <h2 class="update-delete-header-text">Update Freedom Wall</h2>
+            </div>
+
+            <div>
+               <form class="update-delete-entry-form" action="../../controllers/freedom-update.php" method="post">
+                  <div>
+                     <input type="hidden" name="action" value="update">
+                  </div>
+                  <div class="update-delete-form-content">
+                     <div>
+                        <label for="update_id">ID:</label>
+                     </div>
+                     <div>
+                        <input type="text" id="update_id" name="update_id" required>
+                     </div>
+                  </div>
+
+                  <div class="update-delete-form-content-entries">
+                     <div>
+                        <label for="update_content">New Content:</label>
+                     </div>
+                     <div>
+                        <textarea name="update_content" required></textarea>
+                     </div>
+                  </div>
+
+                  <div>
+                     <button type="submit">Update Entry</button>
+                  </div>
+               </form>
+            </div>
          </section>
 
          <!-- Delete freedomwall.xml -->
@@ -109,7 +126,7 @@
                <label for="delete_id">Entry ID:</label>
                <input type="text" id="delete_id" name="delete_id" class="entry-id" required>
                <br>
-               <button type="submit" class="entry-button">Delete Entry</button>
+               <button type="submit">Delete Entry</button>
             </form>
          </section>
       </section>

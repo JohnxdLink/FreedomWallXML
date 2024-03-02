@@ -70,50 +70,134 @@ a.logout-anchor {
 
 /* ! Main Content */
 main.main-content {
-   padding: 0px 10px 0px 10px;
    width: 100vw;
    height: 100vh;
    display: flex;
    flex-direction: row;
-   justify-content: space-between;
+   justify-content: space-evenly;
 }
 
-/* ! Main Content Header */
-div.main-content__header-content {
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-}
-
+/* ! Main Content Create */
 section.main-content__create-entry {
+   display: flex;
+   flex-direction: column;
    width: 20vw;
+}
+
+p.main-content__haeder-text {
+   padding: 10px 20px 10px 20px;
+   font-size: 2.7rem;
+   font-weight: bold;
+   color: #ffffff;
    background-color: #460000;
+   border-radius: 10px;
+}
+
+div.main-content__txt-content {
+   margin: 10px 0px 5px 0px;
+}
+
+textarea.main-content__txt-area {
+   padding: 10px;
+   width: 100%;
+   border: 2px solid #460000;
+   border-radius: 10px;
+}
+
+button.main-content__btn-submit {
+   padding: 10px 0px 10px 0px;
+   width: 100%;
+   font-size: 1.4rem;
+   background-color: #460000;
+   color: #ffffff;
+   font-weight: bolder;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ! Main Content Read */
 section.main-content__read-entry {
-   overflow-x: hidden;
+   padding: 20px;
+   width: 50vw;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
    overflow-y: auto;
-   width: 60vw;
+}
+
+section.main-cotent__scroll {
+   overflow-y: auto;
+   height: 87vh;
 }
 
 div.freedom-wall-content {
-   margin: 20px;
+   padding: 10px;
    display: flex;
    flex-direction: column;
-   border: 1px solid #fc3e2c;
+   border: 2px solid #fc3e2c;
+   background-color: #ffffff;
    border-radius: 7px;
+   box-shadow: 10px 15px 0px rgba(0, 0, 0, 0.70);
 }
 
 div.freedom-wall-id-content {
    display: flex;
    flex-direction: row;
    align-items: center;
+   gap: 10px;
+   font-size: 1rem;
+   font-weight: bold;
+   color: #460000;
 }
 
 section.update-delete-entry {
-   width: 20vw;
+   width: 25vw;
    display: flex;
    flex-direction: column;
 
+}
+
+p.freedom-wall-content-text {
+   font-size: 1.2rem;
+   text-indent: 2rem;
+   text-align: justify;
+}
+
+/* ! Main COntent Update Entry */
+section.update-delete-entry {
+   display: flex;
+   flex-direction: column;
+   color: #ffffff;
+}
+
+section.update-entry {
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   background-color: #b00606;
+   border-radius: 10px;
+   box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.80);
+}
+
+h2.update-delete-header-text {
+   text-align: center;
+   font-size: 1.2rem;
+}
+
+form.update-delete-entry-form {
+   display: flex;
+   flex-direction: column;
+}
+
+div.update-delete-form-content {
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
+}
+
+div.update-delete-form-content-entries {
+   display: flex;
+   flex-direction: column;
 }

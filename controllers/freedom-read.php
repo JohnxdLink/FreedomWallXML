@@ -19,14 +19,14 @@ if (file_exists($xmlFile)) {
       <div class="freedom-wall-content">
          <div class="freedom-wall-id-content">
             <div>
-               <label for="">Freedom Wall ID No.</label>
+               <label for="">ID No. </label>
             </div>
             <div>
                <p><?= $id ?></p>
             </div>
          </div>
-         <div class="freedom-wall-content-text">
-            <p><?= $content ?></p>
+         <div>
+            <p class="freedom-wall-content-text"><?= $content ?></p>
          </div>
       </div>
 <?php
