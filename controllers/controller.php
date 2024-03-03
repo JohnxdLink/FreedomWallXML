@@ -9,7 +9,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    } elseif ($action === 'register') {
       handleRegister();
    } else {
-      echo 'Invalid action';
+      echo '<script>';
+      echo 'alert("Invalid action");';
+      echo 'window.location.href = "../index.php";';
+      echo '</script>';
    }
 }
 
@@ -31,7 +34,10 @@ function handleLogin()
    } elseif (isset($users[$username]) && $users[$username]['password'] === $password) {
       // Set user session and redirect to home
       $_SESSION['username'] = $username;
-      header('Location: ../views/home/index.php');
+      echo '<script>';
+      echo 'alert("You are redirecting to Freedom Wall XML home page");';
+      echo 'window.location.href = "../views/home/index.php";';
+      echo '</script>';
       exit();
    } else {
       echo '<script>';
@@ -67,11 +73,15 @@ function handleRegister()
 
          // Set user session and redirect to home after registration
          $_SESSION['username'] = $username;
-         header('Location: ../views/home/index.php');
+         echo '<script>';
+         echo 'alert("Account created you are now redirect at Freedom Wall XML Homepage");';
+         echo 'window.location.href = "../views/home/index.php";';
+         echo '</script>';
+
          exit();
       } else {
          echo '<script>';
-         echo 'alert("Account does not exist!");';
+         echo 'alert("Something went wrong please trry again");';
          echo 'window.location.href = "../index.php";';
          echo '</script>';
       }

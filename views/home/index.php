@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="../css/home-index-css.css">
-   <title>Home Page</title>
+   <title>Freedom Wall | Home</title>
 </head>
 
 <body class="whole-content">
@@ -17,16 +17,16 @@
 
       <section class="header-content_panes">
          <div>
-            <button>left-pane</button>
+            <img class="layer-panes" src="../../public/images/left-pane.png" alt="" onclick="hide_right_pane()">
          </div>
          <div>
-            <button onclick="hide_left_right_pane()">middle-pane</button>
+            <img class="layer-panes" src="../../public/images/middle-pane.png" alt="" onclick="hide_left_right_pane()">
          </div>
          <div>
-            <button>right-pane</button>
+            <img class="layer-panes" src="../../public/images/right-pane.png" alt="" onclick="hide_left_pane()">
          </div>
          <div>
-            <button>reset-pane</button>
+            <img class="layer-panes" src="../../public/images/reset-pane.png" alt="" onclick="reset_all_pane()">
          </div>
       </section>
 
@@ -63,7 +63,7 @@
                   <input type="hidden" name="action" value="create">
                </div>
                <div class="main-content__txt-content">
-                  <textarea class="main-content__txt-area" name="create_content" rows="17"></textarea><br>
+                  <textarea class="main-content__txt-area" name="create_content" rows="19"></textarea><br>
                </div>
                <div>
                   <button class="main-content__btn-submit" type="submit">POST</button>
@@ -95,24 +95,24 @@
                   </div>
                   <div class="update-delete-form-content">
                      <div>
-                        <label for="update_id">ID:</label>
+                        <label class="update-delete__header" for="update_id">ID:</label>
                      </div>
-                     <div>
-                        <input type="text" id="update_id" name="update_id" required>
+                     <div style="width: 90%;">
+                        <input class="update-delete__input" type="text" id="update_id" name="update_id" required>
                      </div>
                   </div>
 
                   <div class="update-delete-form-content-entries">
                      <div>
-                        <label for="update_content">New Content:</label>
+                        <label class="update-delete__header" for="update_content">New Content:</label>
                      </div>
-                     <div>
-                        <textarea name="update_content" required></textarea>
+                     <div style="width: 100%;">
+                        <textarea class="update-delete__txt-content" name="update_content" rows="6" required></textarea>
                      </div>
                   </div>
 
-                  <div>
-                     <button type="submit">Update Entry</button>
+                  <div style="width: 100%;">
+                     <button class="update-delete-submit-btn" type="submit">Update Entry</button>
                   </div>
                </form>
             </div>
@@ -120,14 +120,30 @@
 
          <!-- Delete freedomwall.xml -->
          <section class="delete-entry">
-            <h2>Delete Freedom Wall Entry</h2>
-            <form action="../../controllers/freedom-delete.php" method="post">
-               <input type="hidden" name="action" value="delete">
-               <label for="delete_id">Entry ID:</label>
-               <input type="text" id="delete_id" name="delete_id" class="entry-id" required>
-               <br>
-               <button type="submit">Delete Entry</button>
-            </form>
+            <div>
+               <h2 class="update-delete-header-text">Delete Freedom Wall</h2>
+            </div>
+
+            <div>
+               <form class="update-delete-entry-form" action="../../controllers/freedom-delete.php" method="post">
+                  <div>
+                     <input type="hidden" name="action" value="delete">
+                  </div>
+
+                  <div class="update-delete-form-content">
+                     <div>
+                        <label class="update-delete__header" for="delete_id">ID:</label>
+                     </div>
+                     <div style="width: 100%;">
+                        <input class="update-delete__input" type="text" id="delete_id" name="delete_id" required>
+                     </div>
+                  </div>
+
+                  <div>
+                     <button class="update-delete-submit-btn" type="submit">Delete Entry</button>
+                  </div>
+               </form>
+            </div>
          </section>
       </section>
    </main>

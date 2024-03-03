@@ -68,6 +68,17 @@ a.logout-anchor {
    color: #ffffff;
 }
 
+img.layer-panes {
+   width: 25px;
+   height: 25px;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+img.layer-panes:hover {
+   background-color: #fc3e2c;
+}
+
 /* ! Main Content */
 main.main-content {
    width: 100vw;
@@ -79,9 +90,10 @@ main.main-content {
 
 /* ! Main Content Create */
 section.main-content__create-entry {
+   padding: 0px 15px 0px 10px;
    display: flex;
    flex-direction: column;
-   width: 20vw;
+   width: 25vw;
 }
 
 p.main-content__haeder-text {
@@ -117,9 +129,12 @@ button.main-content__btn-submit {
    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+button.main-content__btn-submit:hover {
+   background-color: #fc3e2c;
+}
+
 /* ! Main Content Read */
 section.main-content__read-entry {
-   padding: 20px;
    width: 50vw;
    display: flex;
    flex-direction: column;
@@ -152,32 +167,30 @@ div.freedom-wall-id-content {
    color: #460000;
 }
 
-section.update-delete-entry {
-   width: 25vw;
-   display: flex;
-   flex-direction: column;
-
-}
-
 p.freedom-wall-content-text {
    font-size: 1.2rem;
    text-indent: 2rem;
    text-align: justify;
 }
 
-/* ! Main COntent Update Entry */
+/* ! Main Content Update Entry */
 section.update-delete-entry {
+   padding: 0px 10px 0px 15px;
+   width: 25vw;
    display: flex;
    flex-direction: column;
+   gap: 20px;
    color: #ffffff;
 }
 
-section.update-entry {
+section.update-entry,
+section.delete-entry {
    padding: 10px;
    display: flex;
    flex-direction: column;
-   background-color: #b00606;
    border-radius: 10px;
+   background-color: #460000;
+   gap: 10px;
    box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.80);
 }
 
@@ -189,15 +202,79 @@ h2.update-delete-header-text {
 form.update-delete-entry-form {
    display: flex;
    flex-direction: column;
+   gap: 10px;
 }
 
 div.update-delete-form-content {
+   width: 100%;
    display: flex;
    flex-direction: row;
-   gap: 10px;
+   align-items: center;
+   gap: 5px;
+}
+
+label.update-delete__header {
+   font-size: 1.1rem;
+   font-weight: bold;
+}
+
+input.update-delete__input {
+   padding: 5px;
+   width: 100%;
+   font-size: 1.1rem;
+   border: 1px solid #b00606;
+   border-radius: 5px;
 }
 
 div.update-delete-form-content-entries {
    display: flex;
    flex-direction: column;
+}
+
+textarea.update-delete__txt-content {
+   padding: 10px;
+   width: 100%;
+   font-size: 1.2rem;
+   border: 1px solid #b00606;
+   border-radius: 5px;
+
+}
+
+button.update-delete-submit-btn {
+   padding: 10px 0px 10px 0px;
+   width: 100%;
+   font-size: 1.4rem;
+   background-color: #b00606;
+   color: #ffffff;
+   font-weight: bolder;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button.update-delete-submit-btn:hover {
+   background-color: #fc3e2c;
+}
+
+/* ! Scrollbar Styles */
+::-webkit-scrollbar {
+   width: 8px;
+}
+
+/* ! Scrollbar Track */
+::-webkit-scrollbar-track {
+   background: #FBFBFB;
+   border-radius: 10px;
+}
+
+/* ! Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+   background: linear-gradient(to right, #460000, #fc3e2c);
+   border-radius: 10px;
+}
+
+/* ! Scrollbar Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+   background: linear-gradient(to right, #fc3e2c, #460000);
 }

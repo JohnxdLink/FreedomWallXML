@@ -6,7 +6,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
    if ($action === 'delete') {
       handleDelete();
    } else {
-      echo 'Invalid action';
+      echo '<script>';
+      echo 'alert("Invalid action");';
+      echo 'window.location.href = "../views/admin/index.php";';
+      echo '</script>';
    }
 }
 
@@ -70,11 +73,17 @@ function handleDelete()
 
          $dom->save($xmlFile);
 
-         echo 'Account deleted successfully!';
+         echo '<script>';
+         echo 'alert("Invalid registration data");';
+         echo 'window.location.href = "../views/admin/index.php";';
+         echo '</script>';
       } else {
          echo 'XML file not found';
       }
    } else {
-      echo 'Invalid delete data';
+      echo '<script>';
+      echo 'alert("Invalid delete data");';
+      echo 'window.location.href = "../views/admin/index.php";';
+      echo '</script>';
    }
 }

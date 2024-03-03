@@ -6,6 +6,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       handleCreate();
    } else {
       echo 'Invalid action';
+      echo '<script>';
+      echo 'alert("Invalid action");';
+      echo 'window.location.href = "../views/admin/index.php";';
+      echo '</script>';
    }
 }
 
@@ -32,12 +36,19 @@ function handleCreate()
             'address' => $address
          ];
          saveUsers($users);
-         echo 'Account created successfully!';
+
+         header('Location: ../views/admin/index.php');
       } else {
-         echo 'Username already exists';
+         echo '<script>';
+         echo 'alert("Username already exists");';
+         echo 'window.location.href = "../views/admin/index.php";';
+         echo '</script>';
       }
    } else {
-      echo 'Invalid registration data';
+      echo '<script>';
+      echo 'alert("Invalid registration data");';
+      echo 'window.location.href = "../views/admin/index.php";';
+      echo '</script>';
    }
 }
 

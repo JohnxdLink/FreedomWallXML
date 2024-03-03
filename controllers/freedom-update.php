@@ -5,7 +5,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    if ($action === 'update') {
       handleUpdate();
    } else {
-      echo 'Invalid action';
+      echo '<script>';
+      echo 'alert("Invalid action");';
+      echo 'window.location.href = "../views/home/index.php";';
+      echo '</script>';
    }
 }
 
@@ -46,11 +49,20 @@ function handleUpdate()
          // Save the updated XML file
          $dom->save($xmlFile);
 
-         echo 'Entry updated successfully!';
+         echo '<script>';
+         echo 'alert("Entry updated successfully!");';
+         echo 'window.location.href = "../views/home/index.php";';
+         echo '</script>';
       } else {
-         echo 'Entry not found';
+         echo '<script>';
+         echo 'alert("Entry not found");';
+         echo 'window.location.href = "../views/home/index.php";';
+         echo '</script>';
       }
    } else {
-      echo 'Invalid data';
+      echo '<script>';
+      echo 'alert("Invalid data");';
+      echo 'window.location.href = "../views/home/index.php";';
+      echo '</script>';
    }
 }

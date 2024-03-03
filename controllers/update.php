@@ -92,6 +92,9 @@ function handleUpdate()
          echo 'XML file not found';
       }
    } else {
-      echo 'Invalid update data';
+      echo '<script>';
+      echo 'alert("Invalid update data");';
+      echo '</script>';
+      header('Location: ../views/admin/index.php');
    }
 }

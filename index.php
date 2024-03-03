@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="./views/css/style.css">
    <link rel="stylesheet" href="./views/css/w3-animation.css">
-   <title>Login and Registration Form</title>
+   <title>Freedom Wall | Welcome</title>
 </head>
 
 <body class="whole-content">

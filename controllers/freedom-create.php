@@ -5,7 +5,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    if ($action === 'create') {
       handleCreate();
    } else {
-      echo 'Invalid action';
+      echo '<script>';
+      echo 'alert("Invalid action");';
+      echo 'window.location.href = "../views/home/index.php";';
+      echo '</script>';
    }
 }
 
@@ -49,8 +52,11 @@ function handleCreate()
       // Save the updated XML file
       $dom->save($xmlFile);
 
-      echo 'Entry created successfully!';
+      header('Location: ../views/home/index.php');
    } else {
-      echo 'Invalid data';
+      echo '<script>';
+      echo 'alert("Invalid data");';
+      echo 'window.location.href = "../views/home/index.php";';
+      echo '</script>';
    }
 }

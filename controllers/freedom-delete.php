@@ -5,7 +5,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    if ($action === 'delete') {
       handleDelete();
    } else {
-      echo 'Invalid action';
+      echo '<script>';
+      echo 'alert("Invalid action");';
+      echo 'window.location.href = "../views/home/index.php";';
+      echo '</script>';
    }
 }
 
@@ -44,11 +47,22 @@ function handleDelete()
          // Save the updated XML file
          $dom->save($xmlFile);
 
-         echo 'Entry deleted successfully!';
+         echo '<script>';
+         echo 'alert("Entry deleted successfully!");';
+         echo 'window.location.href = "../views/home/index.php";';
+         echo '</script>';
       } else {
-         echo 'Entry not found';
+         echo '';
+         echo '<script>';
+         echo 'alert("Entry not found");';
+         echo 'window.location.href = "../views/home/index.php";';
+         echo '</script>';
       }
    } else {
-      echo 'Invalid data';
+      echo '';
+      echo '<script>';
+      echo 'alert("Invalid data");';
+      echo 'window.location.href = "../views/home/index.php";';
+      echo '</script>';
    }
 }
