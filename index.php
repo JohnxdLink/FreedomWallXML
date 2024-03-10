@@ -4,9 +4,15 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="language" content="English">
+   <meta name="title" content="Green Archive">
+   <meta name="description" content="This webpage is all about Freedom Wall XML Content">
+   <meta name="robots" content="index, follow">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="Castro John Christian">
+   <title>Freedom Wall | Welcome</title>
    <link rel="stylesheet" href="./views/css/style.css">
    <link rel="stylesheet" href="./views/css/w3-animation.css">
-   <title>Freedom Wall | Welcome</title>
 </head>
 
 <body class="whole-content">
@@ -187,6 +193,7 @@
       </section>
    </main>
    <script src="./views/js/script.js"></script>
+   <script src="./views/js/content_loader.js"></script>
 </body>
 
 </html>

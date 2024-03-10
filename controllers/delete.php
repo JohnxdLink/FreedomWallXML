@@ -74,7 +74,7 @@ function handleDelete()
          $dom->save($xmlFile);
 
          echo '<script>';
-         echo 'alert("Invalid registration data");';
+         echo 'alert("Account sucessfully deleted");';
          echo 'window.location.href = "../views/admin/index.php";';
          echo '</script>';
       } else {

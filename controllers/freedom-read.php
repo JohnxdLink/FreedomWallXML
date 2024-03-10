@@ -8,7 +8,9 @@ $dom->formatOutput = true;
 if (file_exists($xmlFile)) {
    $dom->load($xmlFile);
 
-   $entries = $dom->getElementsByTagName('entry');
+   // Get all entries and reverse the order
+   $entries = iterator_to_array($dom->getElementsByTagName('entry'));
+   $entries = array_reverse($entries);
 
    foreach ($entries as $entry) {
       $id = $entry->getElementsByTagName('id')->item(0)->nodeValue;

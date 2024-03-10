@@ -4,8 +4,14 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../css/home-index-css.css">
+   <meta name="language" content="English">
+   <meta name="title" content="Green Archive">
+   <meta name="description" content="This webpage is all about Freedom Wall XML Content">
+   <meta name="robots" content="index, follow">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="Castro John Christian">
    <title>Freedom Wall | Home</title>
+   <link rel="stylesheet" href="../css/home-index-css.css">
 </head>
 
 <body class="whole-content">
@@ -31,6 +37,9 @@
       </section>
 
       <section class="header-content__login-acccount">
+         <div class="notification-content">
+            <img class="notificaiton-icon__layout" src="../../public/images/icons8-notification-90.png" alt="">
+         </div>
          <div class="user-greeting">
             <?php
             session_start();

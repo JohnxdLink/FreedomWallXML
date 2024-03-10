@@ -4,27 +4,27 @@
     <id>1</id>
     <username>Johnxd</username>
     <password>2315</password>
-    <firstname>Johnxd</firstname>
+    <firstname>John</firstname>
     <lastname>Castro</lastname>
     <email>Johnxd@gmail.com</email>
-    <address>Cebu</address>
+    <address>Compostela</address>
   </user>
   <user>
     <id>2</id>
     <username>Isa</username>
-    <password>2311</password>
+    <password>2316</password>
     <firstname>Isabel</firstname>
-    <lastname>Umaling</lastname>
-    <email>Isa@gmail.com</email>
-    <address>Cebu</address>
+    <lastname>Sanchez</lastname>
+    <email>Isabel@gmail.com</email>
+    <address>Danao</address>
   </user>
   <user>
     <id>3</id>
-    <username>Art</username>
+    <username>Jane</username>
     <password>2312</password>
-    <firstname>Artix</firstname>
-    <lastname>Krieger</lastname>
-    <email>Art@gmail.com</email>
-    <address>Cebu</address>
+    <firstname>Jane</firstname>
+    <lastname>David</lastname>
+    <email>Jane@gmail.com</email>
+    <address>Quezon</address>
   </user>
 </users>

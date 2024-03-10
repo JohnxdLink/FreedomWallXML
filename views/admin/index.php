@@ -4,8 +4,14 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../css/admin-index-css.css">
+   <meta name="language" content="English">
+   <meta name="title" content="Green Archive">
+   <meta name="description" content="This webpage is all about Freedom Wall XML Content">
+   <meta name="robots" content="index, follow">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="Castro John Christian">
    <title>Freedom Wall | Admin</title>
+   <link rel="stylesheet" href="../css/admin-index-css.css">
 </head>
 
 <body>
@@ -18,9 +24,17 @@
             <h1 class="header-text">Admin Page</h1>
          </section>
       </section>
-      <section class="anchor-logout--layout">
-         <a class="anchor-logout" href="../../index.php">Logout</a>
+
+      <section class="anchor-content">
+         <section class="anchor-logout--layout">
+            <a class="anchor-logout" href="../../index.php">Logout</a>
+         </section>
+
+         <section class="anchor-logout--layout">
+            <a class="anchor-logout" href="../admin/announcements.php">Announcements</a>
+         </section>
       </section>
+
    </header>
 
    <main class="content">
