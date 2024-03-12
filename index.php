@@ -12,10 +12,9 @@
    <meta name="author" content="Castro John Christian">
    <title>Freedom Wall | Welcome</title>
    <link rel="stylesheet" href="./views/css/style.css">
-   <link rel="stylesheet" href="./views/css/w3-animation.css">
 </head>
 
-<body class="whole-content">
+<body class="whole-content" data-page="main-index">
    <header class="header-content">
       <section class="header-content__logo">
          <img class="jc-logo--layout" src="./public/images/JC Logo.png" alt="jc-logo">
@@ -193,7 +192,6 @@
       </section>
    </main>
    <script src="./views/js/script.js"></script>
-   <script src="./views/js/content_loader.js"></script>
 </body>
 
 </html>

@@ -29,10 +29,6 @@
          <section class="anchor-logout--layout">
             <a class="anchor-logout" href="../../index.php">Logout</a>
          </section>
-
-         <section class="anchor-logout--layout">
-            <a class="anchor-logout" href="../admin/announcements.php">Announcements</a>
-         </section>
       </section>
 
    </header>
@@ -167,6 +163,7 @@
       </section>
    </main>
    <script src="../js/script.js"></script>
+   <script type="module" src="./views/js/load_css.js"></script>
 </body>
 
 </html>

@@ -21,29 +21,35 @@ function handleLogin()
    $username = isset($_POST['login_username']) ? $_POST['login_username'] : '';
    $password = isset($_POST['login_password']) ? $_POST['login_password'] : '';
 
-   // Validate login (you may want to check against the XML file)
-   $users = loadUsers();
+   // ? Load admin credentials from JSON file
+   $adminCredentials = loadAdminCredentials();
 
-   if ($username === 'admin' && $password === 'admin') {
+   if ($username === $adminCredentials['username'] && $password === $adminCredentials['password']) {
       // Redirect to admin page
       echo '<script>';
       echo 'alert("You are redirecting to admin page");';
       echo 'window.location.href = "../views/admin/index.php";';
       echo '</script>';
       exit();
-   } elseif (isset($users[$username]) && $users[$username]['password'] === $password) {
-      // Set user session and redirect to home
-      $_SESSION['username'] = $username;
-      echo '<script>';
-      echo 'alert("You are redirecting to Freedom Wall XML home page");';
-      echo 'window.location.href = "../views/home/index.php";';
-      echo '</script>';
-      exit();
    } else {
-      echo '<script>';
-      echo 'alert("Account does not exist!");';
-      echo 'window.location.href = "../index.php";';
-      echo '</script>';
+
+      // ? Validate against XML file (if needed)
+      $users = loadUsers();
+
+      if (isset($users[$username]) && $users[$username]['password'] === $password) {
+         // ? Set user session and redirect to home
+         $_SESSION['username'] = $username;
+         echo '<script>';
+         echo 'alert("You are redirecting to Freedom Wall XML home page");';
+         echo 'window.location.href = "../views/home/index.php";';
+         echo '</script>';
+         exit();
+      } else {
+         echo '<script>';
+         echo 'alert("Account does not exist!");';
+         echo 'window.location.href = "../index.php";';
+         echo '</script>';
+      }
    }
 }
 
@@ -154,4 +160,18 @@ function saveUsers($users)
    }
 
    $dom->save($xmlFile);
+}
+
+function loadAdminCredentials()
+{
+   $jsonFile = '../views/js/admin_credentials.json'; // Adjust the path accordingly
+
+   if (file_exists($jsonFile)) {
+      $jsonContent = file_get_contents($jsonFile);
+      $adminCredentials = json_decode($jsonContent, true);
+
+      return $adminCredentials['admin'];
+   } else {
+      return [];
+   }
 }

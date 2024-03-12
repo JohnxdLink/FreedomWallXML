@@ -27,4 +27,13 @@
     <email>Jane@gmail.com</email>
     <address>Quezon</address>
   </user>
+  <user>
+    <id>4</id>
+    <username>Grace</username>
+    <password>2316</password>
+    <firstname>Merry Grace</firstname>
+    <lastname>Abapo</lastname>
+    <email>Grace@gmailcom</email>
+    <address>Cebu</address>
+  </user>
 </users>

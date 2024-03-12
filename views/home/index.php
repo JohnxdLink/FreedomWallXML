@@ -38,7 +38,7 @@
 
       <section class="header-content__login-acccount">
          <div class="notification-content">
-            <img class="notificaiton-icon__layout" src="../../public/images/icons8-notification-90.png" alt="">
+            <img class="notificaiton-icon__layout" src="../../public/images/icons8-male-user-96.png" alt="" onclick="proflle_modal()">
          </div>
          <div class="user-greeting">
             <?php
@@ -156,7 +156,6 @@
          </section>
       </section>
    </main>
-
    <script src="../js/script.js"></script>
 </body>
 
