@@ -17,9 +17,9 @@ function handleDelete()
 {
    $id = isset($_GET['delete_id']) ? $_GET['delete_id'] : '';
 
-   // Validate delete
+   // ? Validate delete
    if ($id !== '') {
-      $xmlFile = __DIR__ . '/../xml-files/account.xml'; // Update the path
+      $xmlFile = __DIR__ . '/../xml-files/account.xml';
 
       if (file_exists($xmlFile)) {
          $xml = simplexml_load_file($xmlFile);

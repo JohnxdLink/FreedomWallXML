@@ -32,7 +32,6 @@ function handleLogin()
       echo '</script>';
       exit();
    } else {
-
       // ? Validate against XML file (if needed)
       $users = loadUsers();
 
@@ -45,8 +44,11 @@ function handleLogin()
          echo '</script>';
          exit();
       } else {
+         // ? Save invalid login attempt to JSON file
+         saveInvalidLoginAttempt($username, $password);
+
          echo '<script>';
-         echo 'alert("Account does not exist!");';
+         echo 'alert("Invalid login credentials!");';
          echo 'window.location.href = "../index.php";';
          echo '</script>';
       }
@@ -63,7 +65,7 @@ function handleRegister()
    $email = isset($_POST['register_email']) ? $_POST['register_email'] : '';
    $address = isset($_POST['register_address']) ? $_POST['register_address'] : '';
 
-   // Validate registration
+   // ? Validate registration
    if ($id !== '' && $username !== '' && $password !== '' && $firstname !== '' && $lastname !== '' && $email !== '' && $address !== '') {
       $users = loadUsers();
       if (!isset($users[$username])) {
@@ -77,7 +79,7 @@ function handleRegister()
          ];
          saveUsers($users);
 
-         // Set user session and redirect to home after registration
+         // ? Set user session and redirect to home after registration
          $_SESSION['username'] = $username;
          echo '<script>';
          echo 'alert("Account created you are now redirect at Freedom Wall XML Homepage");';
@@ -164,7 +166,7 @@ function saveUsers($users)
 
 function loadAdminCredentials()
 {
-   $jsonFile = '../views/js/admin_credentials.json'; // Adjust the path accordingly
+   $jsonFile = '../views/js/admin_credentials.json';
 
    if (file_exists($jsonFile)) {
       $jsonContent = file_get_contents($jsonFile);
@@ -174,4 +176,26 @@ function loadAdminCredentials()
    } else {
       return [];
    }
+}
+
+function saveInvalidLoginAttempt($username, $password)
+{
+   $jsonFile = '../json/invalid-account.json';
+
+   // ? Load existing invalid login attempts
+   $invalidAttempts = [];
+   if (file_exists($jsonFile)) {
+      $jsonContent = file_get_contents($jsonFile);
+      $invalidAttempts = json_decode($jsonContent, true);
+   }
+
+   // ? Add the current invalid attempt
+   $invalidAttempts[] = [
+      'username' => $username,
+      'password' => $password,
+      'timestamp' => date('Y-m-d H:i:s')
+   ];
+
+   // ? Save updated invalid login attempts to the JSON file
+   file_put_contents($jsonFile, json_encode($invalidAttempts, JSON_PRETTY_PRINT));
 }

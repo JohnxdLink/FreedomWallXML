@@ -16,18 +16,18 @@ function handleDelete()
 {
    $id = isset($_POST['delete_id']) ? $_POST['delete_id'] : '';
 
-   // Validate data
+   // ? Validate data
    if ($id !== '') {
-      // Load the XML file
+      // ? Load the XML file
       $xmlFile = __DIR__ . '/../xml-files/freedomwall.xml';
       $dom = new DOMDocument('1.0');
       $dom->preserveWhiteSpace = false;
       $dom->formatOutput = true;
 
-      // Load existing XML
+      // ? Load existing XML
       $dom->load($xmlFile);
 
-      // Find the entry with the specified ID
+      // ? Find the entry with the specified ID
       $entries = $dom->getElementsByTagName('entry');
       $entryToDelete = null;
 
@@ -41,10 +41,10 @@ function handleDelete()
       }
 
       if ($entryToDelete !== null) {
-         // Remove the entry from the XML
+         // ? Remove the entry from the XML
          $entryToDelete->parentNode->removeChild($entryToDelete);
 
-         // Save the updated XML file
+         // ? Save the updated XML file
          $dom->save($xmlFile);
 
          echo '<script>';

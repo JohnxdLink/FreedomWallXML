@@ -20,7 +20,7 @@ function handleUpdate()
    $email = isset($_POST['update_email']) ? $_POST['update_email'] : '';
    $address = isset($_POST['update_address']) ? $_POST['update_address'] : '';
 
-   // Validate update
+   // ? Validate update
    if ($id !== '' && $password !== '' && $firstname !== '' && $lastname !== '' && $email !== '' && $address !== '') {
       $xmlFile = __DIR__ . '/../xml-files/account.xml';
 

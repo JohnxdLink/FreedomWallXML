@@ -17,18 +17,18 @@ function handleUpdate()
    $id = isset($_POST['update_id']) ? $_POST['update_id'] : '';
    $content = isset($_POST['update_content']) ? $_POST['update_content'] : '';
 
-   // Validate data
+   // ? Validate data
    if ($id !== '' && $content !== '') {
-      // Load the XML file
+      // ? Load the XML file
       $xmlFile = __DIR__ . '/../xml-files/freedomwall.xml';
       $dom = new DOMDocument('1.0');
       $dom->preserveWhiteSpace = false;
       $dom->formatOutput = true;
 
-      // Load existing XML
+      // ? Load existing XML
       $dom->load($xmlFile);
 
-      // Find the entry with the specified ID
+      // ? Find the entry with the specified ID
       $entries = $dom->getElementsByTagName('entry');
       $entryToUpdate = null;
 
@@ -42,11 +42,11 @@ function handleUpdate()
       }
 
       if ($entryToUpdate !== null) {
-         // Update the content of the entry
+         // ? Update the content of the entry
          $contentNode = $entryToUpdate->getElementsByTagName('content')->item(0);
          $contentNode->nodeValue = $content;
 
-         // Save the updated XML file
+         // ? Save the updated XML file
          $dom->save($xmlFile);
 
          echo '<script>';
