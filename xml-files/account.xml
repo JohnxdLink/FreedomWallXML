@@ -36,4 +36,40 @@
     <email>Grace@gmailcom</email>
     <address>Cebu</address>
   </user>
+  <user>
+    <id>5</id>
+    <username>Tito</username>
+    <password>2322</password>
+    <firstname>Ralph</firstname>
+    <lastname>Tito</lastname>
+    <email>Heplar@gmail.com</email>
+    <address>Compostela</address>
+  </user>
+  <user>
+    <id>6</id>
+    <username>Karl</username>
+    <password>2111</password>
+    <firstname>Karl</firstname>
+    <lastname>Pilapil</lastname>
+    <email>Karl@gmail.com</email>
+    <address>Danao</address>
+  </user>
+  <user>
+    <id>7</id>
+    <username>Jason</username>
+    <password>4422</password>
+    <firstname>Jason</firstname>
+    <lastname>Igot</lastname>
+    <email>Jason@gmail.com</email>
+    <address>Liloan</address>
+  </user>
+  <user>
+    <id>8</id>
+    <username>Joof</username>
+    <password>5500</password>
+    <firstname>Joof</firstname>
+    <lastname>Macapaz</lastname>
+    <email>Joof@gmail.com</email>
+    <address>Danao</address>
+  </user>
 </users>

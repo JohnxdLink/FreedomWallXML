@@ -108,58 +108,67 @@
       </section>
 
       <section class="dashboard-content">
-         <div>
-            <h1>Dashboard</h1>
-         </div>
-         <?php
-         // Include the read logic to load users' data
-         include_once('../../controllers/read.php');
-         ?>
+         <section class="dashboard-content__layout">
+            <section>
+               <div>
+                  <h1>Dashboard</h1>
+               </div>
+               <?php
+               // Include the read logic to load users' data
+               include_once('../../controllers/read.php');
+               ?>
 
-         <table>
-            <tr>
-               <th>ID</th>
-               <th>Username</th>
-               <th>Password</th>
-               <th>First Name</th>
-               <th>Last Name</th>
-               <th>Email</th>
-               <th>Address</th>
-               <th>Edit/Update</th>
-            </tr>
-
-            <?php
-            // Check if $users is set before using it
-            if (isset($users)) {
-               foreach ($users as $user) {
-            ?>
+               <table>
                   <tr>
-                     <td><?= $user['id'] ?></td>
-                     <td><?= $user['username'] ?></td>
-                     <td><?= $user['password'] ?></td>
-                     <td><?= $user['firstname'] ?></td>
-                     <td><?= $user['lastname'] ?></td>
-                     <td><?= $user['email'] ?></td>
-                     <td><?= $user['address'] ?></td>
-                     <td>
-                        <div class="edit-delete-content">
-                           <div class="anchor-edit-design">
-                              <a class="anchor-design" href="../../controllers/edit.php?action=edit&edit_id=<?= $user['id'] ?>">Edit</a>
-                           </div>
-                           <div class="anchor-delete-design">
-                              <a class="anchor-design" href="#" onclick="confirmDelete(<?= $user['id'] ?>)">Delete</a>
-                           </div>
-                        </div>
-                     </td>
+                     <th>ID</th>
+                     <th>Username</th>
+                     <th>Password</th>
+                     <th>First Name</th>
+                     <th>Last Name</th>
+                     <th>Email</th>
+                     <th>Address</th>
+                     <th>Edit/Update</th>
                   </tr>
-            <?php
-               }
-            } else {
-               echo '<tr><td colspan="9">No users found</td></tr>';
-            }
-            ?>
 
-         </table>
+                  <?php
+                  // Check if $users is set before using it
+                  if (isset($users)) {
+                     foreach ($users as $user) {
+                  ?>
+                        <tr>
+                           <td><?= $user['id'] ?></td>
+                           <td><?= $user['username'] ?></td>
+                           <td><?= $user['password'] ?></td>
+                           <td><?= $user['firstname'] ?></td>
+                           <td><?= $user['lastname'] ?></td>
+                           <td><?= $user['email'] ?></td>
+                           <td><?= $user['address'] ?></td>
+                           <td>
+                              <div class="edit-delete-content">
+                                 <div class="anchor-edit-design">
+                                    <a class="anchor-design" href="../../controllers/edit.php?action=edit&edit_id=<?= $user['id'] ?>">Edit</a>
+                                 </div>
+                                 <div class="anchor-delete-design">
+                                    <a class="anchor-design" href="#" onclick="confirmDelete(<?= $user['id'] ?>)">Delete</a>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                  <?php
+                     }
+                  } else {
+                     echo '<tr><td colspan="9">No users found</td></tr>';
+                  }
+                  ?>
+
+               </table>
+            </section>
+            <section>
+               <form action="../../controllers/save-json.php" method="post">
+                  <button type="submit">Save as Json File</button>
+               </form>
+            </section>
+         </section>
       </section>
    </main>
    <script src="../js/script.js"></script>

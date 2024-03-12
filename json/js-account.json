@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "Johnxd",
+      "password": "2315",
+      "firstname": "John",
+      "lastname": "Castro",
+      "email": "Johnxd@gmail.com",
+      "address": "Compostela"
+    },
+    {
+      "id": "2",
+      "username": "Isa",
+      "password": "2316",
+      "firstname": "Isabel",
+      "lastname": "Sanchez",
+      "email": "Isabel@gmail.com",
+      "address": "Danao"
+    },
+    {
+      "id": "3",
+      "username": "Jane",
+      "password": "2312",
+      "firstname": "Jane",
+      "lastname": "David",
+      "email": "Jane@gmail.com",
+      "address": "Quezon"
+    },
+    {
+      "id": "4",
+      "username": "Grace",
+      "password": "2316",
+      "firstname": "Merry Grace",
+      "lastname": "Abapo",
+      "email": "Grace@gmailcom",
+      "address": "Cebu"
+    },
+    {
+      "id": "5",
+      "username": "Tito",
+      "password": "2322",
+      "firstname": "Ralph",
+      "lastname": "Tito",
+      "email": "Heplar@gmail.com",
+      "address": "Compostela"
+    },
+    {
+      "id": "6",
+      "username": "Karl",
+      "password": "2111",
+      "firstname": "Karl",
+      "lastname": "Pilapil",
+      "email": "Karl@gmail.com",
+      "address": "Danao"
+    },
+    {
+      "id": "7",
+      "username": "Jason",
+      "password": "4422",
+      "firstname": "Jason",
+      "lastname": "Igot",
+      "email": "Jason@gmail.com",
+      "address": "Liloan"
+    },
+    {
+      "id": "8",
+      "username": "Joof",
+      "password": "5500",
+      "firstname": "Joof",
+      "lastname": "Macapaz",
+      "email": "Joof@gmail.com",
+      "address": "Danao"
+    }
+  ]
+}
