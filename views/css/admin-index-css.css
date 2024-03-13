@@ -221,3 +221,11 @@ div.edit-delete-content {
    gap: 10px;
    align-items: center;
 }
+
+section.modal-section {
+   width: 100vw;
+   height: 100vh;
+   position: absolute;
+   top: 0;
+   background-color: #ffffff;
+}

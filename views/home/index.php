@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="language" content="English">
-   <meta name="title" content="Green Archive">
+   <meta name="title" content="Freedom XML">
    <meta name="description" content="This webpage is all about Freedom Wall XML Content">
    <meta name="robots" content="index, follow">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">

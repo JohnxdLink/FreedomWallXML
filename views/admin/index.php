@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="language" content="English">
-   <meta name="title" content="Green Archive">
+   <meta name="title" content="Freedom XML">
    <meta name="description" content="This webpage is all about Freedom Wall XML Content">
    <meta name="robots" content="index, follow">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -171,8 +171,46 @@
          </section>
       </section>
    </main>
+
+   <!-- Modal For Json File -->
+   <section class="modal-section">
+      <section class="modal-section__content">
+         <form action="../../controllers/delete-invalid-accounts.php" method="post">
+            <div>
+               <button type="submit">Delete Invalid Accounts</button>
+            </div>
+            <div>
+               <div>
+                  <h1>Invalid Accounts</h1>
+               </div>
+               <table>
+                  <tr>
+                     <th>Username</th>
+                     <th>Password</th>
+                     <th>Timestamp</th>
+                  </tr>
+                  <?php
+                  // Read invalid accounts from JSON file
+                  $invalidAccounts = json_decode(file_get_contents('../../json/invalid-account.json'), true);
+                  if (!empty($invalidAccounts)) {
+                     foreach ($invalidAccounts as $account) {
+                        echo '<tr>';
+                        echo '<td>' . $account['username'] . '</td>';
+                        echo '<td>' . $account['password'] . '</td>';
+                        echo '<td>' . $account['timestamp'] . '</td>';
+                        echo '</tr>';
+                     }
+                  } else {
+                     echo '<tr><td colspan="3">No invalid accounts found</td></tr>';
+                  }
+                  ?>
+               </table>
+            </div>
+         </form>
+
+      </section>
+   </section>
    <script src="../js/script.js"></script>
-   <script type="module" src="./views/js/load_css.js"></script>
 </body>
 
 </html>
